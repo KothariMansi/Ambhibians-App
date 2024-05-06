@@ -33,7 +33,7 @@ class AmphibiansViewModel(
         getAmphibiansPhoto()
     }
 
-     fun getAmphibiansPhoto() {
+     private fun getAmphibiansPhoto() {
         viewModelScope.launch {
             amphibiansUiState = try {
                AmphibiansUiState.Success( amphibiansRepository.getPhotos())
